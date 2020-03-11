@@ -1,0 +1,20 @@
+{
+  "name": "fargate-lambda-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t fargate-lambda-template ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamwagnerbr/fargate-lambda-template.git"
+  },
+  "author": "williamwagnerbr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamwagnerbr/fargate-lambda-template/issues"
+  },
+  "homepage": "https://github.com/williamwagnerbr/fargate-lambda-template#readme"
+}
