@@ -19,7 +19,7 @@ jobs:
       - image: circleci/node
     working_directory: ~/project
     steps:
-      - aws-ecr/build_and_push_image:
+      - aws-ecr/build-and-push-image:
           repo: fargate-lambda-template
           tag: latest
 workflows:
