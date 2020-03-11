@@ -26,7 +26,7 @@ workflows:
         - test
         - build-and-deploy:
           requires:
-            - checkout_code
+            - test
           filters:
             only:
               - master
