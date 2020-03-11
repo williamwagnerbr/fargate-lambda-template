@@ -7,16 +7,15 @@ jobs:
       - image: circleci/node
     working_directory: ~/project
     steps:
-      - checkout
-      - run: cd ~/project/function
-      - run: npm install
-      - run: npm test
+      checkout
+      - run:cd ~/project/function
+      - run:npm install
+      - run:npm test
   build-and-deploy:
     docker:
       - image: circleci/node
     working_directory: ~/project
     steps:
-      #- checkout
       - aws-ecr/build-and-push-image:
         path: ~/project
         repo: 867043545815.dkr.ecr.us-east-1.amazonaws.com/fargate-lambda-template
@@ -26,8 +25,4 @@ workflows:
     jobs:
       - test
       - build-and-deploy:
-        requires:
-          - test
-        filters:
-          only:
-            - master
+        requires: test
