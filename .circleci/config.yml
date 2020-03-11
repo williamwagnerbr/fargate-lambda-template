@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@4.0.4
 jobs:
-  test:
+  build-deploy:
     docker:
       - image: circleci/node
     working_directory: ~/project
@@ -14,11 +14,6 @@ jobs:
       - run:
           name: Run Unit Tests
           command: cd ~/project/function && npm test
-  build:
-    docker:
-      - image: circleci/node
-    working_directory: ~/project
-    steps:
       - setup_remote_docker
       - aws-ecr/build-and-push-image:
           repo: fargate-lambda-template
@@ -27,7 +22,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - test
-      - build:
-          requires:
-              - test
+      - build-deploy:
+          filter:
+              only:
+                  - master
