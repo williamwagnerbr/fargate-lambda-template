@@ -1,0 +1,1 @@
+# fargate-lambda-template
