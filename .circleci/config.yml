@@ -23,6 +23,7 @@ workflows:
   build:
     jobs:
       - build-deploy:
+        filters:
           branches:
-              only:
-                  - master
+            only:
+              - master
