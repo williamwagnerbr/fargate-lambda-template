@@ -19,6 +19,7 @@ jobs:
       - image: circleci/node
     working_directory: ~/project
     steps:
+      - setup_remote_docker
       - aws-ecr/build-and-push-image:
           repo: fargate-lambda-template
           tag: latest
