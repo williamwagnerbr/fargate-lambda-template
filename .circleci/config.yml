@@ -9,14 +9,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Open lambda folder
-          command: cd ~/project/function
-      - run:
           name: Install dependencies
-          command: npm install
+          command: cd ~/project/function && npm install
       - run:
           name: Run Unit Tests
-          command: npm test
+          command: cd ~/project/function && npm test
   build:
     docker:
       - image: circleci/node
