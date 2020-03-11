@@ -21,7 +21,6 @@ jobs:
     steps:
       - aws-ecr/build-and-push-image:
           create-repo: true
-          account-url: 867043545815.dkr.ecr.us-east-1.amazonaws.com
           repo: fargate-lambda-template
           tag: latest
 workflows:
