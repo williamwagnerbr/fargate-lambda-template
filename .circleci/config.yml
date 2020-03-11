@@ -16,7 +16,7 @@ jobs:
       - image: circleci/node
     working_directory: ~/project
     steps:
-      - checkout
+      #- checkout
       - aws-ecr/build-and-push-image:
         path: ~/project
         repo: 867043545815.dkr.ecr.us-east-1.amazonaws.com/fargate-lambda-template
