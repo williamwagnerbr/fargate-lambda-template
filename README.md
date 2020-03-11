@@ -1,1 +1,2 @@
+[![CircleCI](https://circleci.com/gh/williamwagnerbr/fargate-lambda-template/tree/master.svg?style=svg)](https://circleci.com/gh/williamwagnerbr/fargate-lambda-template/tree/master)
 # fargate-lambda-template
