@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@6.7.1
+  aws-ecr: circleci/aws-ecr@6.7.0
 jobs:
   test:
     docker:
@@ -20,7 +20,6 @@ jobs:
     working_directory: ~/project
     steps:
       - aws-ecr/build-and-push-image:
-          path: ~/project
           repo: fargate-lambda-template
 workflows:
   version: 2
