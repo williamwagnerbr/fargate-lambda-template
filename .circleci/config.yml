@@ -21,8 +21,8 @@ jobs:
     steps:
       - aws-ecr/build-and-push-image:
           create-repo: true
-          repo: fargate-lambda-template
-          tag: latest
+          repo: /fargate-lambda-template
+          tag: 'latest'
 workflows:
   version: 2
   build:
